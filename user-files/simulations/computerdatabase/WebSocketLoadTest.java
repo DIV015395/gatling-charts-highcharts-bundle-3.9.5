@@ -8,39 +8,36 @@ import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
 
 class WebSocketLoadTest extends Simulation {
-    HttpProtocolBuilder httpProtocol = http
-            .baseUrl("https://chatqa.clovedental.in/cometchat_send.php") // Replace with the WebSocket URL's base URL
-            .header("basedata","W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
-            .header("file_url","")
-            .header("localmessageid","55663239408920")
-            .header("msg_type","10")
-            .header("to","65");
 
+        HttpProtocolBuilder httpProtocol = http
+                .baseUrl("https://chatqa.clovedental.in")
+                .wsBaseUrl("wss://chatqa.clovedental.in/wss2/socket") // WebSocket URL
+                .acceptHeader("text/plain, */*; q=0.01")
+                .header("Sec-WebSocket-Version", "13")
+                .header("Sec-WebSocket-Extensions", "permessage-deflate; client_max_window_bits; server_max_window_bits=15")
+                .header("Sec-WebSocket-Key", "amxpZGVmbHh5bGljeXl2aQ==")
+                .header("current_chat_id", "0")
+                .header("userId", "7")
+                .header("Connection", "Upgrade")
+                .header("authToken", "RDZgQ1v6bZ2LyQvy5mObo9PtnrB1fICp7BWAOIaD6a4%3D")
+                .header("deviceId", "93723B60-19AE-4B82-831F-9DD9A4899351-1696586186.616768-12EFBD82-6609-4FBE-A588-B5A75B8C2779")
+                .header("connected_in", "1")
+                .header("Upgrade", "websocket")
+                .header("Host", "chatqa.clovedental.in:443")
+                .header("Origin", "wss://chatqa.clovedental.in")
+                .header("platform", "iOS");
 
-    ScenarioBuilder users  = scenario("WebSocket Load Test")
-            .exec(http("WebSocket Connection")
-                    .get("/wss2/socket") // Replace with the WebSocket path
-                    .check(status().is(101))) // Check if the WebSocket connection is successfully upgraded to WebSocket
+    ScenarioBuilder scn = scenario("WebSocket Load Test")
+                .exec(
+                        ws("WebSocket Connect").connect("/wss2/socket")
+                )
+                .pause(5, seconds) ;// Adjust as needed for your load testing scenario
 
-            .pause(5 ,seconds) // Adjust the pause duration as needed
-
-            .exec(http("WebSocket Interaction")
-                    .post("wss://chatqa.clovedental.in/wss2/socket") // Replace with the WebSocket path
-                    .header("platform", "android")
-                    .header("appVersion", "3.1.3")
-                    .header("platformVersion", "33")
-                    .header("userId", "14")
-                    .header("current_chat_id", "0")
-                    .header("authToken", "W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
-                    .header("connected_in", "2")
-                    .header("deviceId", "3e5830ea-d0a9-4e66-968d-fd8314730a4a")
-                    .body(StringBody(""))
-                    .check(status().is(101))) // Check if WebSocket interaction is successful
-            .pause(5, seconds) ;
 
     {
         setUp(
-                users.injectOpen(atOnceUsers(10)) // Adjust the number of users as needed
+                scn.injectOpen(atOnceUsers(500)) // Adjust the number of users as needed
         ).protocols(httpProtocol);
     }
+
 }
