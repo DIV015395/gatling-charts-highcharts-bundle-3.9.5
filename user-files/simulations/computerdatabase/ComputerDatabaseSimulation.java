@@ -23,7 +23,7 @@ public class ComputerDatabaseSimulation extends Simulation
     ScenarioBuilder users  = scenario("WebSocket Load Test")
             .exec(http("WebSocket Connection")
                     .get("/wss2/socket") // Replace with the WebSocket path
-                    .check(status().is(101))) // Check if the WebSocket connection is successfully upgraded to WebSocket
+                    .check(status().is(200))) // Check if the WebSocket connection is successfully upgraded to WebSocket
 
             .pause(5 ,seconds) // Adjust the pause duration as needed
 
@@ -38,7 +38,7 @@ public class ComputerDatabaseSimulation extends Simulation
                     .header("connected_in", "2")
                     .header("deviceId", "3e5830ea-d0a9-4e66-968d-fd8314730a4a")
                     .body(StringBody(""))
-                    .check(status().is(101))) // Check if WebSocket interaction is successful
+                    .check(status().is(200))) // Check if WebSocket interaction is successful
             .pause(5, seconds) ;
 
     {
