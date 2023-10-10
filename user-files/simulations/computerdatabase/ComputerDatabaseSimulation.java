@@ -23,7 +23,7 @@ public class ComputerDatabaseSimulation extends Simulation
             .header("current_chat_id", "0")
             .header("userId", "7")
             .header("Connection", "Upgrade")
-            .header("authToken", "RDZgQ1v6bZ2LyQvy5mObo9PtnrB1fICp7BWAOIaD6a4%3")
+            .header("authToken", "RDZgQ1v6bZ2LyQvy5mObo9PtnrB1fICp7BWAOIaD6a4%3D")
             .header("deviceId", "93723B60-19AE-4B82-831F-9DD9A4899351-1696586186.616768-12EFBD82-6609-4FBE-A588-B5A75B8C2779")
             .header("connected_in", "1")
             .header("Upgrade", "websocket")
