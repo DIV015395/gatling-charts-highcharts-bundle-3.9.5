@@ -35,13 +35,13 @@ public class ComputerDatabaseSimulation extends Simulation
                     ws("WebSocket Connect")
                             .connect("/wss2/socket")
             )
-            .pause(5 ,seconds) // Adjust as needed for your load testing scenario
+            .pause(10 ,seconds) // Adjust as needed for your load testing scenario
             .exec(
                     ws("WebSocket Close").close()
             );
 
     {
-        setUp(scn.injectOpen(atOnceUsers(20))).protocols(httpProtocol);// Adjust the number of users as needed)
+        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);// Adjust the number of users as needed)
     }
 
 
