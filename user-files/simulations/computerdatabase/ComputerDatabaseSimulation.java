@@ -38,7 +38,7 @@ public class ComputerDatabaseSimulation extends Simulation
 
     {
         setUp(
-                scn.injectOpen(atOnceUsers(50)) // Adjust the number of users as needed
+                scn.injectOpen(atOnceUsers(10)) // Adjust the number of users as needed
         ).protocols(httpProtocol);
     }
 
