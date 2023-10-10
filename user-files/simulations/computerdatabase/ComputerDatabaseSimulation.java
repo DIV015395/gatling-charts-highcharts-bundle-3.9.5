@@ -15,7 +15,7 @@ public class ComputerDatabaseSimulation extends Simulation
 
     HttpProtocolBuilder httpProtocol = http
             .baseUrl("https://chatqa.clovedental.in")
-            .wsBaseUrl("wss://chatqa.clovedental.in/wss2/socket") // WebSocket URL
+            .wsBaseUrl("wss://chatqa.clovedental.in") // WebSocket URL
             .acceptHeader("text/plain, */*; q=0.01")
             .header("Sec-WebSocket-Version", "13")
             .header("Sec-WebSocket-Extensions", "permessage-deflate; client_max_window_bits; server_max_window_bits=15")
