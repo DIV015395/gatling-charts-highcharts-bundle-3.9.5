@@ -34,7 +34,7 @@ public class ComputerDatabaseSimulation extends Simulation
                     ws("WebSocket Connect")
                             .connect("/wss2/socket")
             )
-            .pause(1) // Adjust as needed for your load testing scenario
+            .pause(10) // Adjust as needed for your load testing scenario
             .exec(
                     ws("WebSocket Close").close()
             );
