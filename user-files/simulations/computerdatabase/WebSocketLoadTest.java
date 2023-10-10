@@ -9,8 +9,13 @@ import io.gatling.javaapi.http.*;
 
 class WebSocketLoadTest extends Simulation {
     HttpProtocolBuilder httpProtocol = http
-            .baseUrl("https://chatqa.clovedental.in") // Replace with the WebSocket URL's base URL
-            .acceptHeader("application/json");
+            .baseUrl("https://chatqa.clovedental.in/cometchat_send.php") // Replace with the WebSocket URL's base URL
+            .header("basedata","W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
+            .header("file_url","")
+    .header("localmessageid","55663239408920")
+     .header("msg_type","10")
+      .header("to","65");
+
 
     ScenarioBuilder users  = scenario("WebSocket Load Test")
             .exec(http("WebSocket Connection")
