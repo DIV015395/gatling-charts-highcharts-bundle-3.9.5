@@ -2,6 +2,7 @@ package computerdatabase;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
+import static io.gatling.recorder.internal.bouncycastle.oer.its.ieee1609dot2.basetypes.Duration.seconds;
 
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
@@ -12,85 +13,37 @@ import java.util.concurrent.ThreadLocalRandom;
 public class ComputerDatabaseSimulation extends Simulation
 {
 
-    HttpProtocolBuilder httpProtocol =
-                http.baseUrl("https://computer-database.gatling.io")
-                        .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
-                        .acceptLanguageHeader("en-US,en;q=0.5")
-                        .acceptEncodingHeader("gzip, deflate")
-                        .userAgentHeader(
-                                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0"
-                        );
+    HttpProtocolBuilder httpProtocol = http
+            .baseUrl("https://chatqa.clovedental.in/cometchat_send.php") // Replace with the WebSocket URL's base URL
+            .header("basedata","W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
+            .header("file_url","")
+            .header("localmessageid","55663239408920")
+            .header("msg_type","10")
+            .header("to","65");
+    ScenarioBuilder users  = scenario("WebSocket Load Test")
+            .exec(http("WebSocket Connection")
+                    .get("/wss2/socket") // Replace with the WebSocket path
+                    .check(status().is(101))) // Check if the WebSocket connection is successfully upgraded to WebSocket
 
-        FeederBuilder<String> feeder = csv("search.csv").random();
+            .pause(5 ,seconds) // Adjust the pause duration as needed
 
-        ChainBuilder search =
-                exec(http("Home").get("/"))
-                        .pause(1)
-                        .feed(feeder)
-                        .exec(
-                                http("Search")
-                                        .get("/computers?f=#{searchCriterion}")
-                                        .check(
-                                                css("a:contains('#{searchComputerName}')", "href").saveAs("computerUrl")
-                                        )
-                        )
-                        .pause(1)
-                        .exec(
-                                http("Select")
-                                        .get("#{computerUrl}")
-                                        .check(status().is(200))
-                        )
-                        .pause(1);
+            .exec(http("WebSocket Interaction")
+                    .post("wss://chatqa.clovedental.in/wss2/socket") // Replace with the WebSocket path
+                    .header("platform", "android")
+                    .header("appVersion", "3.1.3")
+                    .header("platformVersion", "33")
+                    .header("userId", "14")
+                    .header("current_chat_id", "0")
+                    .header("authToken", "W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
+                    .header("connected_in", "2")
+                    .header("deviceId", "3e5830ea-d0a9-4e66-968d-fd8314730a4a")
+                    .body(StringBody(""))
+                    .check(status().is(101))) // Check if WebSocket interaction is successful
+            .pause(5, seconds) ;
 
-        // Repeat is a loop resolved at RUNTIME
-        ChainBuilder browse =
-                // Note how we force the counter name, so we can reuse it
-                repeat(4, "i").on(
-                        exec(
-                                http("Page #{i}")
-                                        .get("/computers?p=#{i}")
-                        ).pause(1)
-                );
-
-        // Note we should be using a feeder here
-        // Let's demonstrate how we can retry: let's make the request fail randomly and retry a given
-        // number of times
-        ChainBuilder edit =
-                // Let's try at max 2 times
-                tryMax(2)
-                        .on(
-                                exec(
-                                        http("Form")
-                                                .get("/computers/new")
-                                )
-                                        .pause(1)
-                                        .exec(
-                                                http("Post")
-                                                        .post("/computers")
-                                                        .formParam("name", "Beautiful Computer")
-                                                        .formParam("introduced", "2012-05-30")
-                                                        .formParam("discontinued", "")
-                                                        .formParam("company", "37")
-                                                        .check(
-                                                                status().is(
-                                                                        // We do a check on a condition that's been customized with
-                                                                        // a lambda. It will be evaluated every time a user executes
-                                                                        // the request.
-                                                                        session -> 200 + ThreadLocalRandom.current().nextInt(2)
-                                                                )
-                                                        )
-                                        )
-                        )
-                        // If the chain didn't finally succeed, have the user exit the whole scenario
-                        .exitHereIfFailed();
-
-        ScenarioBuilder users = scenario("Users").exec(search, browse);
-        ScenarioBuilder admins = scenario("Admins").exec(search, browse, edit);
-
-        {
-            setUp(
-                    users.injectOpen(rampUsers(10).during(10)),
-                    admins.injectOpen(rampUsers(2).during(10))
-            ).protocols(httpProtocol);
-        }
+    {
+        setUp(
+                users.injectOpen(atOnceUsers(10)) // Adjust the number of users as needed
+        ).protocols(httpProtocol);
+    }
 }

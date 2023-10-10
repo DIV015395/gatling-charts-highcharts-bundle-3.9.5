@@ -12,9 +12,9 @@ class WebSocketLoadTest extends Simulation {
             .baseUrl("https://chatqa.clovedental.in/cometchat_send.php") // Replace with the WebSocket URL's base URL
             .header("basedata","W3WNF%2BGgnXSGZV%2Bp8uJFKLzVqk3dJs5s2cCpjVe0Yzk%3D")
             .header("file_url","")
-    .header("localmessageid","55663239408920")
-     .header("msg_type","10")
-      .header("to","65");
+            .header("localmessageid","55663239408920")
+            .header("msg_type","10")
+            .header("to","65");
 
 
     ScenarioBuilder users  = scenario("WebSocket Load Test")
@@ -25,7 +25,7 @@ class WebSocketLoadTest extends Simulation {
             .pause(5 ,seconds) // Adjust the pause duration as needed
 
             .exec(http("WebSocket Interaction")
-                    .post("/wss2/socket") // Replace with the WebSocket path
+                    .post("wss://chatqa.clovedental.in/wss2/socket") // Replace with the WebSocket path
                     .header("platform", "android")
                     .header("appVersion", "3.1.3")
                     .header("platformVersion", "33")
