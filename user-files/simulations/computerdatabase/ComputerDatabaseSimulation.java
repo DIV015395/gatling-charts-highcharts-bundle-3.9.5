@@ -29,11 +29,12 @@ public class ComputerDatabaseSimulation extends Simulation
         .header("Origin", "wss://chatqa.clovedental.in")
         .header("platform", "iOS");
 
+
     ScenarioBuilder scn = scenario("WebSocket Load Test")
             .exec(
                     ws("WebSocket Connect").connect("/wss2/socket")
             )
-            .pause(5, seconds) ;// Adjust as needed for your load testing scenario
+            .pause(5, seconds); // Adjust as needed for your load testing scenario
 
 
     {
