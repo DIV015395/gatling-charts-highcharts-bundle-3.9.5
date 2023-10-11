@@ -62,7 +62,7 @@ public class ComputerDatabaseSimulation extends Simulation
 //            .exec(ws("WebSocket Close").close());
 
     {
-//        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
-        setUp(scn.injectOpen(atOnceUsers(1)),scn1.injectOpen(atOnceUsers(1)).protocols(httpProtocol));
+        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
+//        setUp(scn.injectOpen(atOnceUsers(1)),scn1.injectOpen(atOnceUsers(1)).protocols(httpProtocol));
     }
 }
