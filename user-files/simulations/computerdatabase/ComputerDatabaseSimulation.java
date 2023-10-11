@@ -53,7 +53,7 @@ public class ComputerDatabaseSimulation extends Simulation
             )
             .pause(10000) // Adjust as needed for your load testing scenario
             .exec(ws("WebSocket Close").close());
-    ScenarioBuilder scn1 = scenario("WebSocket Load Test")
+    ScenarioBuilder scn1 = scenario("WebSocket Load Test 2")
             .exec(
                     ws("WebSocket Connect")
                             .connect("/wss2/socket")
