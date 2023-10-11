@@ -1,0 +1,81 @@
+RUN	computerdatabase.ComputerDatabaseSimulation	computerdatabasesimulation	1696937489984	sample run	3.9.5
+REQUEST		WebSocket Connect	1696937491093	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491099	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491100	1696937491100	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491095	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491100	1696937491101	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491101	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491102	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491093	1696937491097	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491101	1696937491101	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491096	1696937491096	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491100	1696937491100	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491100	1696937491100	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491101	1696937491101	KO	j.n.UnknownHostException: chatqa.clovedental.in
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491128
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491129
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491130
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491131
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491133
+USER	WebSocket Load Test	START	1696937491133
+USER	WebSocket Load Test	START	1696937491133
+USER	WebSocket Load Test	START	1696937491133
+USER	WebSocket Load Test	START	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+USER	WebSocket Load Test	START	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+USER	WebSocket Load Test	START	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+USER	WebSocket Load Test	END	1696937491134
+REQUEST		WebSocket Connect	1696937491134	1696937491134	KO	j.n.UnknownHostException: chatqa.clovedental.in
+REQUEST		WebSocket Connect	1696937491134	1696937491134	KO	j.n.UnknownHostException: chatqa.clovedental.in
+USER	WebSocket Load Test	END	1696937491135
+USER	WebSocket Load Test	END	1696937491135
+USER	WebSocket Load Test	END	1696937491135
+USER	WebSocket Load Test	END	1696937491135
+USER	WebSocket Load Test	START	1696937491135
+USER	WebSocket Load Test	START	1696937491135
+USER	WebSocket Load Test	END	1696937491135
+USER	WebSocket Load Test	START	1696937491135
+USER	WebSocket Load Test	START	1696937491135
+USER	WebSocket Load Test	START	1696937491135
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491136
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491136
+USER	WebSocket Load Test	START	1696937491136
+USER	WebSocket Load Test	START	1696937491136
+USER	WebSocket Load Test	END	1696937491136
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491136
+USER	WebSocket Load Test	END	1696937491136
+USER	WebSocket Load Test	START	1696937491136
+USER	WebSocket Load Test	END	1696937491136
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491136
+USER	WebSocket Load Test	START	1696937491136
+USER	WebSocket Load Test	END	1696937491137
+REQUEST		WebSocket Connect	1696937491136	1696937491137	KO	j.n.UnknownHostException: chatqa.clovedental.in
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491137
+USER	WebSocket Load Test	START	1696937491137
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491137
+USER	WebSocket Load Test	END	1696937491137
+REQUEST		WebSocket Connect	1696937491137	1696937491137	KO	j.n.UnknownHostException: chatqa.clovedental.in
+USER	WebSocket Load Test	START	1696937491137
+USER	WebSocket Load Test	END	1696937491137
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491138
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491138
+USER	WebSocket Load Test	START	1696937491138
+USER	WebSocket Load Test	END	1696937491138
+USER	WebSocket Load Test	START	1696937491139
+ERROR	WebSocket Close: Client issued close order but WebSocket was already crashed: j.n.UnknownHostException: chatqa.clovedental.in 	1696937491140
+USER	WebSocket Load Test	END	1696937491140
+USER	WebSocket Load Test	START	1696937491140
+USER	WebSocket Load Test	END	1696937491140

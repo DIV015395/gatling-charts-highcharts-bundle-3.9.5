@@ -1,0 +1,10 @@
+{
+  "simulation": "computerdatabase.ComputerDatabaseSimulation",
+  "simulationId": "computerdatabasesimulation-20231010121555877",
+  "start": 1696940157622,
+  "description": "sample run",
+  "scenarios": ["WebSocket Load Test"],
+  "assertions": [
+
+  ]
+}

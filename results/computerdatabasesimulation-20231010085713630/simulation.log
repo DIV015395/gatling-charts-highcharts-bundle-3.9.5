@@ -1,0 +1,41 @@
+RUN	computerdatabase.ComputerDatabaseSimulation	computerdatabasesimulation	1696928233630	sample run	3.9.5
+USER	WebSocket Load Test	START	1696928234976
+USER	WebSocket Load Test	START	1696928234976
+USER	WebSocket Load Test	START	1696928234976
+USER	WebSocket Load Test	START	1696928234976
+USER	WebSocket Load Test	START	1696928234977
+USER	WebSocket Load Test	START	1696928234977
+USER	WebSocket Load Test	START	1696928234977
+USER	WebSocket Load Test	START	1696928234978
+USER	WebSocket Load Test	START	1696928234978
+USER	WebSocket Load Test	START	1696928234978
+REQUEST		WebSocket Connection	1696928234974	1696928235441	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235441	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235441	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235441	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235441	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235497	OK	 
+REQUEST		WebSocket Connection	1696928234976	1696928235500	OK	 
+REQUEST		WebSocket Interaction	1696928235479	1696928235521	KO	status.find.is(200), but actually found 404
+REQUEST		WebSocket Interaction	1696928235479	1696928235521	KO	status.find.is(200), but actually found 404
+REQUEST		WebSocket Interaction	1696928235479	1696928235521	KO	status.find.is(200), but actually found 404
+REQUEST		WebSocket Interaction	1696928235479	1696928235521	KO	status.find.is(200), but actually found 404
+REQUEST		WebSocket Interaction	1696928235479	1696928235521	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928235526
+USER	WebSocket Load Test	END	1696928235526
+USER	WebSocket Load Test	END	1696928235526
+USER	WebSocket Load Test	END	1696928235526
+USER	WebSocket Load Test	END	1696928235527
+REQUEST		WebSocket Interaction	1696928235499	1696928235533	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928235535
+REQUEST		WebSocket Interaction	1696928235501	1696928235535	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928235536
+REQUEST		WebSocket Connection	1696928234974	1696928235733	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235733	OK	 
+REQUEST		WebSocket Connection	1696928234974	1696928235747	OK	 
+REQUEST		WebSocket Interaction	1696928235736	1696928235837	KO	status.find.is(200), but actually found 404
+REQUEST		WebSocket Interaction	1696928235736	1696928235837	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928235840
+USER	WebSocket Load Test	END	1696928235840
+REQUEST		WebSocket Interaction	1696928235750	1696928235859	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928235861

@@ -1,0 +1,41 @@
+RUN	computerdatabase.ComputerDatabaseSimulation	computerdatabasesimulation	1696925177868	sample run	3.9.5
+USER	WebSocket Load Test	START	1696925179276
+USER	WebSocket Load Test	START	1696925179276
+USER	WebSocket Load Test	START	1696925179272
+USER	WebSocket Load Test	START	1696925179276
+USER	WebSocket Load Test	START	1696925179277
+USER	WebSocket Load Test	START	1696925179277
+USER	WebSocket Load Test	START	1696925179277
+USER	WebSocket Load Test	START	1696925179277
+USER	WebSocket Load Test	START	1696925179276
+USER	WebSocket Load Test	START	1696925179277
+REQUEST		WebSocket Connection	1696925179269	1696925179726	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179271	1696925179726	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179270	1696925179821	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179269	1696925179821	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179270	1696925179821	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179269	1696925179821	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179269	1696925179823	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179270	1696925179823	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179269	1696925179824	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Connection	1696925179269	1696925179826	KO	status.find.is(101), but actually found 200
+REQUEST		WebSocket Interaction	1696925179755	1696925179826	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179755	1696925179826	KO	status.find.is(101), but actually found 404
+USER	WebSocket Load Test	END	1696925179831
+USER	WebSocket Load Test	END	1696925179831
+REQUEST		WebSocket Interaction	1696925179826	1696925179924	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179827	1696925179924	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179825	1696925179927	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179827	1696925179927	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179828	1696925179927	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179827	1696925179927	KO	status.find.is(101), but actually found 404
+REQUEST		WebSocket Interaction	1696925179826	1696925179927	KO	status.find.is(101), but actually found 404
+USER	WebSocket Load Test	END	1696925179928
+REQUEST		WebSocket Interaction	1696925179828	1696925179928	KO	status.find.is(101), but actually found 404
+USER	WebSocket Load Test	END	1696925179930
+USER	WebSocket Load Test	END	1696925179931
+USER	WebSocket Load Test	END	1696925179931
+USER	WebSocket Load Test	END	1696925179931
+USER	WebSocket Load Test	END	1696925179931
+USER	WebSocket Load Test	END	1696925179932
+USER	WebSocket Load Test	END	1696925179932

@@ -1,0 +1,5 @@
+RUN	computerdatabase.ComputerDatabaseSimulation	computerdatabasesimulation	1696928441336	Chat Load Testing	3.9.5
+USER	WebSocket Load Test	START	1696928442680
+REQUEST		WebSocket Connection	1696928442678	1696928443101	OK	 
+REQUEST		WebSocket Interaction	1696928443132	1696928443203	KO	status.find.is(200), but actually found 404
+USER	WebSocket Load Test	END	1696928443210
