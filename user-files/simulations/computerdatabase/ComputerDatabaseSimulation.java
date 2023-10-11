@@ -54,9 +54,17 @@ public class ComputerDatabaseSimulation extends Simulation
             )
             .pause(10) // Adjust as needed for your load testing scenario
             .exec(ws("WebSocket Close").close());
+
+    ScenarioBuilder scn1 = scenario("WebSocket Load Test")
+            .exec(
+                    ws("WebSocket Connect")
+                            .connect("/wss2/socket")
+            )
+            .pause(10) // Adjust as needed for your load testing scenario
+            .exec(ws("WebSocket Close").close());
     {
         setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
-        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol1);
+        setUp(scn1.injectOpen(atOnceUsers(1))).protocols(httpProtocol1);
       // Adjust the number of users as needed)
     }
 }
