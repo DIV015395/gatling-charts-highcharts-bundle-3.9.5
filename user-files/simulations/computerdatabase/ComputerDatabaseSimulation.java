@@ -2,12 +2,9 @@ package computerdatabase;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
-import static io.gatling.recorder.internal.bouncycastle.oer.its.ieee1609dot2.basetypes.Duration.seconds;
-
 import io.gatling.javaapi.core.*;
 import io.gatling.javaapi.http.*;
 
-import java.util.concurrent.ThreadLocalRandom;
 
 
 public class ComputerDatabaseSimulation extends Simulation
@@ -34,14 +31,10 @@ public class ComputerDatabaseSimulation extends Simulation
                     ws("WebSocket Connect")
                             .connect("/wss2/socket")
             )
-            .pause(30) // Adjust as needed for your load testing scenario
-            .exec(
-                    ws("WebSocket Close").close()
-            );
+            .pause(10) ;// Adjust as needed for your load testing scenario
+//            .exec(ws("WebSocket Close").close());
     {
-        setUp(scn.injectOpen(atOnceUsers(200))).protocols(httpProtocol);// Adjust the number of users as needed)
+        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);
+        setUp(scn.injectOpen(atOnceUsers(1))).protocols(httpProtocol);// Adjust the number of users as needed)
     }
-
-
-
 }
